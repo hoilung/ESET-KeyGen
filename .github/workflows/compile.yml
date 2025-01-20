@@ -38,7 +38,7 @@ jobs:
           draft: false
           generate_release_notes: true
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
   macOS_Arm:
     runs-on: macos-latest
     steps:
@@ -65,7 +65,7 @@ jobs:
           draft: false
           generate_release_notes: true
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
   Windows:
     runs-on: windows-latest
     steps:
@@ -103,4 +103,4 @@ jobs:
           draft: false
           generate_release_notes: true
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
